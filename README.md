@@ -2,9 +2,12 @@
 
 This piece of code will sends all JavaScript error's and console log message to you by mail.
 
+Add the JavaScript class to the page
+
 ```html
 	<script type="text/javascript" src="/js/logging.js" />
 ```
+After loading the page the logging can be triggered manually by execute the following piece of code
 
 ```javascript
 	logging.log('Example log message');

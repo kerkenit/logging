@@ -33,6 +33,7 @@
 			} else {
 				window.onload = this.checkjQueryOnload;
 			}
+			this.catchErrors();
 		},
 		checkjQueryOnload: function () {
 			if (!window.jQuery) {
