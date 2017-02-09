@@ -52,9 +52,10 @@
 			});
 		},
 		catchErrors: function () {
+			var that = this;
 			window.console = {
 				log: function (msg) {
-					this.send({
+					that.send({
 						'type': 'log',
 						'message': msg,
 						'script': '',
@@ -62,7 +63,7 @@
 					});
 				},
 				info: function (msg) {
-					this.send({
+					that.send({
 						'type': 'info',
 						'message': msg,
 						'script': '',
@@ -70,7 +71,7 @@
 					});
 				},
 				warn: function (msg) {
-					this.send({
+					that.send({
 						'type': 'warn',
 						'message': msg,
 						'script': '',
@@ -79,7 +80,7 @@
 				}
 			};
 			window.onerror = function (msg, url, lineNumber) {
-				this.send({
+				that.send({
 					'type': 'error',
 					'message': msg,
 					'script': url,
