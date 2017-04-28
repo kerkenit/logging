@@ -27,9 +27,9 @@ public class LoggingWebService : System.Web.Services.WebService
 		try
 		{
 			mailClient.Host = "127.0.0.1";
-			message.From = new System.Net.Mail.MailAddress("mail@domain.com");
+			message.From = new System.Net.Mail.MailAddress("mail@example.com");
 
-			message.To.Add("bugs@domain.com");
+			message.To.Add("bugs@example.com");
 
 			if (blHighPriority)
 			{
